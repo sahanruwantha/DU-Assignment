@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hotel Listings</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Quick Booking */
+    .quick-booking {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .quick-booking .location {
+      margin: 0 10px;
+      text-align: center;
+    }
+
+    .quick-booking h4 {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hotel Listings</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="search.html">Search</a>
+    <a href="reservation-form.html">Reservations</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+  <main>
+    <h2>Available Hotels</h2>
+    <div class="quick-booking">
+      <h3>Quick Booking</h3>
+      <div class="location">
+        <h4>New York</h4>
+        <button>Book Now</button>
+      </div>
+      <div class="location">
+        <h4>San Francisco</h4>
+        <button>Book Now</button>
+      </div>
+      <!-- Add more locations as needed -->
+    </div>
+    <div id="hotel-list">
+      <div class="hotel-card">
+        <img src="https://source.unsplash.com/random/800x600?hotel" alt="Hotel Image">
+        <div class="content">
+          <h3>Hotel Name</h3>
+          <p>Location</p>
+          <p>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+          </p>
+          <p>
+            <i class="fas fa-swimmer"></i> Pool
+            <i class="fas fa-child"></i> Kids Club
+          </p>
+          <p>Starting from $99/night</p>
+          <button>Book Now</button>
+        </div>
+      </div>
+      <div class="hotel-card">
+        <img src="https://source.unsplash.com/random/800x600?luxury-hotel" alt="Hotel Image">
+        <div class="content">
+          <h3>Luxury Hotel Name</h3>
+          <p>Location</p>
+          <p>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </p>
+          <p>
+            <i class="fas fa-concierge-bell"></i>
+            <i class="fas fa-spa"></i>
+            <i class="fas fa-utensils"></i>
+          </p>
+          <p>Starting from $399/night</p>
+          <button>Book Now</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2023 Hotel Reservation. All rights reserved.</p>
+  </footer>
+</body>
+</html>

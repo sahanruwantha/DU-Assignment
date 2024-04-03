@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Hotel Reservations</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?luxury-hotel');
+      background-size: cover;
+      background-position: center;
+      padding: 150px 20px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero button {
+      background-color: #fff;
+      color: #333;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero button:hover {
+      background-color: #ddd;
+    }
+
+    /* Featured Hotels Section */
+    .featured-hotels {
+      padding: 60px 20px;
+      background-color: #f8f8f8;
+    }
+
+    .featured-hotels h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    /* Hotel Card */
+    .hotel-card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .hotel-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .hotel-card .content {
+      padding: 20px;
+      text-align: left;
+    }
+
+    .hotel-card h3 {
+      margin-top: 0;
+      font-size: 1.8rem;
+      font-family: 'Playfair Display', serif;
+      color: #333;
+    }
+
+    .hotel-card p {
+      margin-bottom: 10px;
+      color: #666;
+    }
+
+    .hotel-card button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hotel-card button:hover {
+      background-color: #555;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 100px 20px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .featured-hotels h2 {
+        font-size: 2rem;
+      }
+
+      /* Hamburger Menu Styles */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+      }
+
+      .logo a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        z-index: 1;
+      }
+
+      .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 1.2rem;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-icons {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html"><i class="fas fa-hotel"></i> Luxury Hotel Reservations</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle Navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="nav-links">
+        <a href="search.html"><i class="fas fa-search"></i> Search</a>
+        <a href="reservation-form.html"><i class="fas fa-calendar-alt"></i> Reservations</a>
+        <a href="#"><i class="fas fa-info-circle"></i> About</a>
+        <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+      </div>
+      <div class="nav-icons">
+        <a href="#"><i class="fas fa-user"></i></a>
+        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+      </div>
+    </nav>
+    <div class="hero">
+      <h1>Discover Luxury Accommodations</h1>
+      <p>Experience the ultimate in comfort and sophistication.</p>
+      <button onclick="window.location.href='search.html'"><i class="fas fa-search"></i> Search Hotels</button>
+    </div>
+  </header>
+  <main>
+    <section class="featured-hotels">
+      <h2>Featured Hotels</h2>
+      <div class="hotel-card-container">
+        <div class="hotel-card">
+          <img src="https://source.unsplash.com/random/800x600?hotel" alt="Hotel Image">
+          <div class="content">
+            <h3>The Hilton</h3>
+            <p>Colombo, Sri Lanka</p>
+            <p>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i<i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </p>
+            <p>
+              <i class="fas fa-swimmer"></i>
+              <i class="fas fa-dumbbell"></i>
+              <i class="fas fa-utensils"></i>
+            </p>
+            <p>Starting from $20000/night</p>
+            <button>Book Now</button>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <img src="https://source.unsplash.com/random/800x600?resort" alt="Hotel Image">
+          <div class="content">
+            <h3>The Kingsburry</h3>
+            <p>Colombo, Sri Lanka</p>
+            <p>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </p>
+            <p>
+              <i class="fas fa-swimmer"></i>
+              <i class="fas fa-spa"></i>
+              <i class="fas fa-utensils"></i>
+            </p>
+            <p>Starting from $20000/night</p>
+            <button>Book Now</button>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <img src="https://source.unsplash.com/random/800x600?hotel-room" alt="Hotel Image">
+          <div class="content">
+            <h3>Galle Face Hotel</h3>
+            <p>Colombo, Sri Lanka</p>
+            <p>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </p>
+            <p>
+              <i class="fas fa-dumbbell"></i>
+              <i class="fas fa-utensils"></i>
+              <i class="fas fa-concierge-bell"></i>
+            </p>
+            <p>Starting from $20000/night</p>
+            <button>Book Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <div class="about">
+        <h3>About Us</h3>
+        <p>Learn more about our company and our commitment to providing exceptional hospitality experiences.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="contact">
+        <h3>Contact Us</h3>
+        <p>Get in touch with us for inquiries, reservations, or feedback.</p>
+        <a href="#">Contact</a>
+      </div>
+      <div class="social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <p>&copy; 2023 Luxury Hotel Reservations. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
